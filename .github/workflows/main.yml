@@ -137,9 +137,8 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
-        pass: ${{ secrets.DEPLOY_PASS }}
-#        key: ${{ secrets.SSH_KEY }}
-#        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        key: ${{ secrets.SSH_KEY }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         source: "docker-compose.production.yml"
         target: "taski"
     - name: Executing remote ssh commands to deploy
